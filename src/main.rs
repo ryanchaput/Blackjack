@@ -1,3 +1,5 @@
+use crate::card::Card;
+
 mod card;
 mod deck;
 mod player;
@@ -5,15 +7,19 @@ mod player;
 fn main() {
     println!("Welcome to Blackjack!");
 
-    let pcard1: u32 = 0; //Placeholders
-    let pcard2: u32 = 0;
+    let pcard1: Card; //Placeholders
+    let pcard2: Card;
 
-    let psum = pcard1 + pcard2;
+    let psum = pcard1.get_value() + pcard2.get_value();
 
-    let dcard1: u32 = 0;
-    let dcard2: u32 = 0;
+    let dcard1: Card;
+    let dcard2: Card;
 
-    println!("Your cards are: {pcard1}, {pcard2}, for a total value of: {psum}");
+    let dsum: u32 = dcard1.get_value() + dcard2.get_value();
 
-    println!("The dealer's cards are: {dcard1}, {dcard2}")
+    //println!("Your cards are: {pcard1}, {pcard2}, for a total value of: {psum}");
+
+    //println!("The dealer's cards are: {dcard1}, {dcard2}")
+
+    println!("Hit or stand?");
 }
